@@ -2,8 +2,8 @@ import { RegistroSitHosp } from '../../models/registroSitHosp.model';
 import situacionRepository from "./situacion.repository";
 
 
-async function getSituacion(): Promise<RegistroSitHosp[]>{
-  return situacionRepository.getSituacion();
+function getSituacion(email: string){
+  return situacionRepository.getSituacion(email);
 }
 
 function addSituacion(registroSitHosp: RegistroSitHosp): Promise<RegistroSitHosp>{
@@ -11,3 +11,4 @@ function addSituacion(registroSitHosp: RegistroSitHosp): Promise<RegistroSitHosp
 }
 
 export default { addSituacion, getSituacion };
+

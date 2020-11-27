@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const datoUsFunc_schema_1 = __importDefault(require("./datoUsFunc.schema"));
 function addDatoUsFunc(datoUsFunc) {
-    datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
     return datoUsFunc_schema_1.default.create(datoUsFunc);
 }
 function getDatoUsFunc() {

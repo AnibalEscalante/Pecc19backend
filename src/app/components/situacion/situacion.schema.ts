@@ -3,7 +3,6 @@ import { RegistroSitHosp } from '../../models/registroSitHosp.model';
 
 const definition: Partial<Record<keyof RegistroSitHosp, any>> = {
   
-  _idHospital: { type: String, required: true},
   camasDisponibles: { type: Number, required: true},
   camasOcupadas: { type: Number, required: true},
   camasTotales: { type: Number, required: true},
@@ -11,7 +10,8 @@ const definition: Partial<Record<keyof RegistroSitHosp, any>> = {
   medicos: { type: Number, required: true},
   kinesiologos: { type: Number, required: true},
   tens: { type: Number, required: true},
-  enfermeria: { type: Number, required: true}
+  enfermeria: { type: Number, required: true },
+  email: { type: String, required: true}
 
 };
 

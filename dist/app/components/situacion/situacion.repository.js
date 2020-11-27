@@ -16,9 +16,9 @@ const situacion_schema_1 = __importDefault(require("./situacion.schema"));
 function addSituacion(RegistroSitHosp) {
     return situacion_schema_1.default.create(RegistroSitHosp);
 }
-function getSituacion() {
+function getSituacion(email) {
     return __awaiter(this, void 0, void 0, function* () {
-        return situacion_schema_1.default.find();
+        return situacion_schema_1.default.findOne({ email: email });
     });
 }
 exports.default = { addSituacion, getSituacion };

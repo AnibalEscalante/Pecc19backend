@@ -1,11 +1,8 @@
 export interface DatoUsHosp{
-  _idU: number | string;
-  _idHospital: number | string;
-    nombreEncargado: string;
-    apellidoEncargado: String;
+  _id: number | string;
     numeroContacto: number;
     emailContacto: string;
-    tipoUsuario: string;
+    emailEncargado: string;
     nombreHospital: string;
     direccionHospital: string;
     promocionUsuario: boolean;

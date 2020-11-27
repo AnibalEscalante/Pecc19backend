@@ -9,5 +9,5 @@ export interface RegistroSitHosp{
   tens: number;
   enfermeria: number;
   createdAt: Date;
-  _idHospital: number | string;
+  email: string;
 }

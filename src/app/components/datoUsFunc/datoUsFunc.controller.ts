@@ -7,7 +7,6 @@ async function getDatoUsFunc(): Promise<DatoUsFunc[]>{
 }
 
 function addDatoUsFunc(datoUsFunc: DatoUsFunc): Promise<DatoUsFunc>{
-  datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
   
   return datoUsFuncRepository.addDatoUsFunc(datoUsFunc);
 }
