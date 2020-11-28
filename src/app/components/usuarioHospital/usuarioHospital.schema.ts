@@ -1,10 +1,10 @@
 import { Schema, model, Document } from "mongoose";
-import { DatoUsHosp } from '../../models/usuarioHospital.model';
+import { usuarioHospital } from '../../models/usuarioHospital.model';
 
-const definition: Partial<Record<keyof DatoUsHosp, any>> = {
-  nombreEncargado: { type: String, required: true }
+const definition: Partial<Record<keyof usuarioHospital, any>> = {
+  email: { type: String, required: true }
 };
 
-const schema: Schema<DatoUsHosp> = new Schema(definition)
+const schema: Schema<usuarioHospital> = new Schema(definition)
 
-export default model<DatoUsHosp & Document>('listaUsHosp', schema, 'listaushosps');
+export default model<usuarioHospital & Document>('UsuarioHospital', schema, 'usuarioHospitales');

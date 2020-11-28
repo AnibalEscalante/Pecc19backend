@@ -1,10 +1,6 @@
-export interface DatoUsFunc{
-  _idU: number | string;
-  nombreUsuario: string;
-  apellidoUsuario: String;
-  celularUsuario: number;
-  emailUsuario: string;
-  tipoUsuario: string;
+export interface usuarioFuncionario{
+  _id: number | string;
+  email: string;
   promocionUsuario: boolean;
   documentacion: string;
   especialidad: string;

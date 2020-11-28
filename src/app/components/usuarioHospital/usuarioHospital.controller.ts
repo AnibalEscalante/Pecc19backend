@@ -1,14 +1,14 @@
-import { DatoUsHosp } from '../../models/usuarioHospital.model';
-import listaPostRepository from "./usuarioHospital.repository";
+import { usuarioHospital } from '../../models/usuarioHospital.model';
+import usuarioHospitalRepository from "./usuarioHospital.repository";
 
-function addlistaPost(datoushosp: DatoUsHosp): Promise<DatoUsHosp>{
+function addusuarioHospital(usuarioHospital: usuarioHospital): Promise<usuarioHospital>{
 
-  return listaPostRepository.addlistaPost(datoushosp);
+  return usuarioHospitalRepository.addusuarioHospital(usuarioHospital);
 }
-async function getlistaPost(): Promise<DatoUsHosp[]>{
-  return listaPostRepository.getlistaPost();
+async function getusuarioHospital(): Promise<usuarioHospital[]>{
+  return usuarioHospitalRepository.getusuarioHospital();
 }
 
 
 
-export default { addlistaPost, getlistaPost };
+export default { addusuarioHospital, getusuarioHospital };

@@ -13,13 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const usuarioFuncionario_schema_1 = __importDefault(require("./usuarioFuncionario.schema"));
-function addDatoUsFunc(datoUsFunc) {
-    datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
-    return usuarioFuncionario_schema_1.default.create(datoUsFunc);
+function addusuarioFuncionario(usuarioFuncionario) {
+    return usuarioFuncionario_schema_1.default.create(usuarioFuncionario);
 }
-function getDatoUsFunc() {
+function getusuarioFuncionario() {
     return __awaiter(this, void 0, void 0, function* () {
         return usuarioFuncionario_schema_1.default.find();
     });
 }
-exports.default = { addDatoUsFunc, getDatoUsFunc };
+exports.default = { addusuarioFuncionario, getusuarioFuncionario };

@@ -13,13 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const usuarioFuncionario_repository_1 = __importDefault(require("./usuarioFuncionario.repository"));
-function getDatoUsFunc() {
+function getusuarioFuncionario() {
     return __awaiter(this, void 0, void 0, function* () {
-        return usuarioFuncionario_repository_1.default.getDatoUsFunc();
+        return usuarioFuncionario_repository_1.default.getusuarioFuncionario();
     });
 }
-function addDatoUsFunc(datoUsFunc) {
-    datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
-    return usuarioFuncionario_repository_1.default.addDatoUsFunc(datoUsFunc);
+function addusuarioFuncionario(usuarioFuncionario) {
+    return usuarioFuncionario_repository_1.default.addusuarioFuncionario(usuarioFuncionario);
 }
-exports.default = { addDatoUsFunc, getDatoUsFunc };
+exports.default = { addusuarioFuncionario, getusuarioFuncionario };

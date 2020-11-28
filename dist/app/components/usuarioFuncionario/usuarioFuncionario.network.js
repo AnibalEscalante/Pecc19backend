@@ -18,7 +18,7 @@ const response_module_1 = __importDefault(require("../../modulos/response.module
 const router = express_1.default.Router();
 router.get("/all", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const result = yield usuarioFuncionario_controller_1.default.getDatoUsFunc();
+        const result = yield usuarioFuncionario_controller_1.default.getusuarioFuncionario();
         response_module_1.default.success(req, res, result);
     }
     catch (error) {
@@ -29,7 +29,7 @@ router.post("/add", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const body = req.body;
         try {
-            const result = yield usuarioFuncionario_controller_1.default.addDatoUsFunc(body);
+            const result = yield usuarioFuncionario_controller_1.default.addusuarioFuncionario(body);
             response_module_1.default.success(req, res, result);
         }
         catch (error) {

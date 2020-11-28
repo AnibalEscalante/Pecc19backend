@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const definition = {
-    nombreEncargado: { type: String, required: true }
+    email: { type: String, required: true }
 };
 const schema = new mongoose_1.Schema(definition);
-exports.default = mongoose_1.model('listaUsHosp', schema, 'listaushosps');
+exports.default = mongoose_1.model('UsuarioHospital', schema, 'usuarioHospitales');
