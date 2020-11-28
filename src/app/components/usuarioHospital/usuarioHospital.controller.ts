@@ -1,5 +1,5 @@
-import { DatoUsHosp } from '../../models/datoUsuarioHosp.model';
-import listaPostRepository from "./listaPost.repository";
+import { DatoUsHosp } from '../../models/usuarioHospital.model';
+import listaPostRepository from "./usuarioHospital.repository";
 
 function addlistaPost(datoushosp: DatoUsHosp): Promise<DatoUsHosp>{
 

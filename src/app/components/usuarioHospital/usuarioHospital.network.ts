@@ -1,14 +1,16 @@
-import express, { Router, Request, Response, response } from "express";
-import { DatoUsFunc } from "../../models/datoUsuarioFunc.model";
-import datoUsFuncController from "./datoUsFunc.controller";
-import responseModule  from "../../modulos/response.module";
+import express, { Router, Request, Response }from "express";
+import { DatoUsHosp } from '../../models/usuarioHospital.model';
+import listaPostController from "./usuarioHospital.controller";
+import responseModule from "../../modulos/response.module";
+
 
 
 const router: Router = express.Router();
 
+
 router.get("/all", async (req: Request, res: Response) =>{
   try {
-    const result: DatoUsFunc[] = await datoUsFuncController.getDatoUsFunc();
+    const result: DatoUsHosp[] = await listaPostController.getlistaPost();
     responseModule.success(req, res, result);
   } catch (error) {
     responseModule.error(req, res, "Error Desconocido");
@@ -16,9 +18,9 @@ router.get("/all", async (req: Request, res: Response) =>{
 });
 router.post("/add", async function (req: Request, res: Response) {
   
-  const body: DatoUsFunc = req.body;
+  const body: DatoUsHosp = req.body;
   try {
-    const result: DatoUsFunc = await datoUsFuncController.addDatoUsFunc(body);
+    const result: DatoUsHosp = await listaPostController.addlistaPost(body);
     responseModule.success(req, res, result);
 
   } catch (error) {

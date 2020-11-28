@@ -1,5 +1,5 @@
 import express, { Express } from "express";
-import router from "./listaPost.network";
+import router from "./usuarioHospital.network";
 const listaPost: Express = express();
 listaPost.use('/listaPost', router);
 

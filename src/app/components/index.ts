@@ -1,17 +1,17 @@
 import { Express } from "express";
-import listaPost from "./listaPost";
+import usuarioHospital from "./usuarioHospital";
 import message from "./message"
 import postulacion from "./postulacion";
 import situacion from "./situacion";
-import datoUsFunc from "./datoUsFunc";
-import curriculum from "./curriculum"
+import curriculum from "./curriculum";
+import usuarioFuncionario from "./usuarioFuncionario";
 const components: Express[] = [
    message,
-   listaPost,
+   usuarioHospital,
    postulacion,
    situacion,
-   datoUsFunc,
-   curriculum
+   curriculum,
+   usuarioFuncionario
 ];
 
 export default components;
