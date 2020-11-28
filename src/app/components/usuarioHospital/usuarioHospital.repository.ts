@@ -1,5 +1,5 @@
-import { DatoUsHosp } from '../../models/datoUsuarioHosp.model';
-import listaPostSchema from "./listaPost.schema";
+import { DatoUsHosp } from '../../models/usuarioHospital.model';
+import listaPostSchema from "./usuarioHospital.schema";
 
 function addlistaPost(listaPost: DatoUsHosp): Promise<DatoUsHosp>{
   return listaPostSchema.create<DatoUsHosp>(listaPost);

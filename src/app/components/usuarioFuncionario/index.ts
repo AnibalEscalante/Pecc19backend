@@ -1,5 +1,5 @@
 import express, { Express } from "express";
-import router from "./datoUsFunc.network";
+import router from "./usuarioFuncionario.network";
 
 const datoUsFunc: Express = express();
 datoUsFunc.use('/funcionarios', router);
