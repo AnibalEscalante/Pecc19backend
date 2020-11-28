@@ -1,13 +1,13 @@
-import { DatoUsFunc } from '../../models/usuarioFuncionario.model';
-import datoUsFuncSchema from "./usuarioFuncionario.schema";
+import { usuarioFuncionario } from '../../models/usuarioFuncionario.model';
+import usuarioFuncionarioSchema from "./usuarioFuncionario.schema";
 
-function addDatoUsFunc(datoUsFunc: DatoUsFunc): Promise<DatoUsFunc>{
-  datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
-  return datoUsFuncSchema.create<DatoUsFunc>(datoUsFunc);
+function addusuarioFuncionario(usuarioFuncionario: usuarioFuncionario): Promise<usuarioFuncionario>{
+  
+  return usuarioFuncionarioSchema.create<usuarioFuncionario>(usuarioFuncionario);
 }
 
-async function getDatoUsFunc(): Promise<DatoUsFunc[]>{
-  return datoUsFuncSchema.find();
+async function getusuarioFuncionario(): Promise<usuarioFuncionario[]>{
+  return usuarioFuncionarioSchema.find();
 }
 
-export default { addDatoUsFunc, getDatoUsFunc };
+export default { addusuarioFuncionario, getusuarioFuncionario };

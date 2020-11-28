@@ -1,12 +1,12 @@
-import { DatoUsHosp } from '../../models/usuarioHospital.model';
-import listaPostSchema from "./usuarioHospital.schema";
+import { usuarioHospital } from '../../models/usuarioHospital.model';
+import usuarioHospitalSchema from "./usuarioHospital.schema";
 
-function addlistaPost(listaPost: DatoUsHosp): Promise<DatoUsHosp>{
-  return listaPostSchema.create<DatoUsHosp>(listaPost);
+function addusuarioHospital(usuarioHospital: usuarioHospital): Promise<usuarioHospital>{
+  return usuarioHospitalSchema.create<usuarioHospital>(usuarioHospital);
 }
 
-async function getlistaPost(): Promise<DatoUsHosp[]>{
-  return listaPostSchema.find();
+async function getusuarioHospital(): Promise<usuarioHospital[]>{
+  return usuarioHospitalSchema.find();
 }
 
-export default { addlistaPost, getlistaPost };
+export default { addusuarioHospital, getusuarioHospital };

@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const usuarioHospital_schema_1 = __importDefault(require("./usuarioHospital.schema"));
-function addlistaPost(listaPost) {
-    return usuarioHospital_schema_1.default.create(listaPost);
+function addusuarioHospital(usuarioHospital) {
+    return usuarioHospital_schema_1.default.create(usuarioHospital);
 }
-function getlistaPost() {
+function getusuarioHospital() {
     return __awaiter(this, void 0, void 0, function* () {
         return usuarioHospital_schema_1.default.find();
     });
 }
-exports.default = { addlistaPost, getlistaPost };
+exports.default = { addusuarioHospital, getusuarioHospital };

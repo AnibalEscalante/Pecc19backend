@@ -1,15 +1,14 @@
-import { DatoUsFunc } from '../../models/usuarioFuncionario.model';
-import datoUsFuncRepository from "./usuarioFuncionario.repository";
+import { usuarioFuncionario } from '../../models/usuarioFuncionario.model';
+import usuarioFuncionarioRepository from "./usuarioFuncionario.repository";
 
 
-async function getDatoUsFunc(): Promise<DatoUsFunc[]>{
-  return datoUsFuncRepository.getDatoUsFunc();
+async function getusuarioFuncionario(): Promise<usuarioFuncionario[]>{
+  return usuarioFuncionarioRepository.getusuarioFuncionario();
 }
 
-function addDatoUsFunc(datoUsFunc: DatoUsFunc): Promise<DatoUsFunc>{
-  datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
-  
-  return datoUsFuncRepository.addDatoUsFunc(datoUsFunc);
+function addusuarioFuncionario(usuarioFuncionario: usuarioFuncionario): Promise<usuarioFuncionario>{
+    
+  return usuarioFuncionarioRepository.addusuarioFuncionario(usuarioFuncionario);
 }
 
-export default { addDatoUsFunc, getDatoUsFunc };
+export default { addusuarioFuncionario, getusuarioFuncionario };

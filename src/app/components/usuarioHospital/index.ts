@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import router from "./usuarioHospital.network";
-const listaPost: Express = express();
-listaPost.use('/listaPost', router);
+const usuarioHospital: Express = express();
+usuarioHospital.use('/hospital', router);
 
-export default listaPost;
+export default usuarioHospital;

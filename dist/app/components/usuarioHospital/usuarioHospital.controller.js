@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const usuarioHospital_repository_1 = __importDefault(require("./usuarioHospital.repository"));
-function addlistaPost(datoushosp) {
-    return usuarioHospital_repository_1.default.addlistaPost(datoushosp);
+function addusuarioHospital(usuarioHospital) {
+    return usuarioHospital_repository_1.default.addusuarioHospital(usuarioHospital);
 }
-function getlistaPost() {
+function getusuarioHospital() {
     return __awaiter(this, void 0, void 0, function* () {
-        return usuarioHospital_repository_1.default.getlistaPost();
+        return usuarioHospital_repository_1.default.getusuarioHospital();
     });
 }
-exports.default = { addlistaPost, getlistaPost };
+exports.default = { addusuarioHospital, getusuarioHospital };
