@@ -19,7 +19,6 @@ function getDatoUsFunc() {
     });
 }
 function addDatoUsFunc(datoUsFunc) {
-    datoUsFunc.nombreUsuario = datoUsFunc.nombreUsuario.toLowerCase();
     return datoUsFunc_repository_1.default.addDatoUsFunc(datoUsFunc);
 }
 exports.default = { addDatoUsFunc, getDatoUsFunc };

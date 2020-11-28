@@ -13,25 +13,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const situacion_controller_1 = __importDefault(require("./situacion.controller"));
+const user_controller_1 = __importDefault(require("./user.controller"));
 const response_module_1 = __importDefault(require("../../modulos/response.module"));
 const router = express_1.default.Router();
-router.get("/:email", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.get("/login/:email", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let email = req.params.email;
     try {
-        const result = yield situacion_controller_1.default.getSituacion(email);
+        const result = yield user_controller_1.default.getUser(email);
         response_module_1.default.success(req, res, result);
     }
     catch (error) {
         response_module_1.default.error(req, res, "Error Desconocido");
     }
 }));
-router.post("/add", function (req, res) {
+router.post("/register", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const body = req.body;
         try {
-            const result = yield situacion_controller_1.default.addSituacion(body);
-            response_module_1.default.success(req, res, result, 201);
+            const result = yield user_controller_1.default.addUser(body);
+            response_module_1.default.success(req, res, result);
         }
         catch (error) {
             response_module_1.default.error(req, res, "Error desconocido");

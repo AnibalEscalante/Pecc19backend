@@ -1,10 +1,6 @@
 export interface DatoUsFunc{
-  _idU: number | string;
-  nombreUsuario: string;
-  apellidoUsuario: String;
-  celularUsuario: number;
+  _id: number | string;
   emailUsuario: string;
-  tipoUsuario: string;
   promocionUsuario: boolean;
   documentacion: string;
   especialidad: string;

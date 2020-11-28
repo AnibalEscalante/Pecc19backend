@@ -6,9 +6,10 @@ import responseModule from '../../modulos/response.module';
 
 const router: Router = express.Router();
 
-router.get("/all", async (req: Request, res: Response) =>{
+router.get("/:email", async (req: Request, res: Response) => {
+  let email = req.params.email;
   try {
-    const result: RegistroSitHosp[] = await situacionController.getSituacion();
+    const result: RegistroSitHosp | null = await situacionController.getSituacion(email);
     responseModule.success(req, res, result);
   } catch (error) {
     responseModule.error(req, res, "Error Desconocido");

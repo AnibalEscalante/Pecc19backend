@@ -1,4 +1,4 @@
-import situacion from '.';
+
 import { RegistroSitHosp } from '../../models/registroSitHosp.model';
 import situacionSchema from "./situacion.schema";
 
@@ -6,8 +6,8 @@ function addSituacion(RegistroSitHosp: RegistroSitHosp ): Promise<RegistroSitHos
   return situacionSchema.create<RegistroSitHosp>(RegistroSitHosp);
 }
 
-async function getSituacion(): Promise<RegistroSitHosp[]>{
-  return situacionSchema.find();
+async function getSituacion(email: string){
+  return situacionSchema.findOne({ email: email });
 }
 
 export default { addSituacion, getSituacion };
