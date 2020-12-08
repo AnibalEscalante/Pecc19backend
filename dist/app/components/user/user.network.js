@@ -38,4 +38,23 @@ router.post("/register", function (req, res) {
         }
     });
 });
+router.get("/usuarios", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const result = yield user_controller_1.default.getusuario();
+        response_module_1.default.success(req, res, result);
+    }
+    catch (error) {
+        response_module_1.default.error(req, res, "Error Desconocido");
+    }
+}));
+router.get("/id/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    let id = req.params.id;
+    try {
+        const result = yield user_controller_1.default.getUserById(id);
+        response_module_1.default.success(req, res, result);
+    }
+    catch (error) {
+        response_module_1.default.error(req, res, "Error Desconocido");
+    }
+}));
 exports.default = router;

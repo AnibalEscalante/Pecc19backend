@@ -13,5 +13,12 @@ function addUser(user: User): Promise<User>{
   
   return userRepository.addUser(user);
 }
+function getusuario(): Promise<User[] | null>{
+  return userRepository.getusuario()
+}
 
-export default { addUser, getUser };
+function getUserById(id: string){
+  return userRepository.getUserById(id)
+}
+
+export default { addUser, getUser, getUserById, getusuario };

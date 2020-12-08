@@ -5,8 +5,15 @@ function addusuarioHospital(usuarioHospital: usuarioHospital): Promise<usuarioHo
   return usuarioHospitalSchema.create<usuarioHospital>(usuarioHospital);
 }
 
-async function getusuarioHospital(): Promise<usuarioHospital[]>{
-  return usuarioHospitalSchema.find();
+async function getusuarioHospital(): Promise<usuarioHospital[] | null>{
+  return usuarioHospitalSchema.find({
+    promocionUsuario: true
+    });
 }
 
-export default { addusuarioHospital, getusuarioHospital };
+function getusuarioHospitalById(id: string){
+    return usuarioHospitalSchema.findById(id);
+}
+
+
+export default { addusuarioHospital, getusuarioHospital, getusuarioHospitalById };

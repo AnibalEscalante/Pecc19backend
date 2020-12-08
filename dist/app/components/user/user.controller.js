@@ -13,4 +13,10 @@ function addUser(user) {
     user.email = user.email.toLocaleLowerCase();
     return user_repository_1.default.addUser(user);
 }
-exports.default = { addUser, getUser };
+function getusuario() {
+    return user_repository_1.default.getusuario();
+}
+function getUserById(id) {
+    return user_repository_1.default.getUserById(id);
+}
+exports.default = { addUser, getUser, getUserById, getusuario };

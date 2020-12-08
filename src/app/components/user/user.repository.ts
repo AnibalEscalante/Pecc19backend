@@ -8,5 +8,14 @@ function addUser(user:User): Promise<User>{
 function getUser(email: string){
   return userSchema.findOne({ email: email });
 }
+function getUserById(id: string){
+  return userSchema.findById(id);
+}
+async function getusuario(): Promise<User[] | null>{
+  return userSchema.find({
+    promocionUsuario: true
+    });
+}
 
-export default { addUser, getUser };
+
+export default { addUser, getUser, getUserById, getusuario };

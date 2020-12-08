@@ -5,13 +5,16 @@ import postulacion from "./postulacion";
 import situacion from "./situacion";
 import curriculum from "./curriculum";
 import usuarioFuncionario from "./usuarioFuncionario";
+import  user  from './user';
+
 const components: Express[] = [
    message,
    usuarioHospital,
    postulacion,
    situacion,
    curriculum,
-   usuarioFuncionario
+   usuarioFuncionario,
+   user
 ];
 
 export default components;

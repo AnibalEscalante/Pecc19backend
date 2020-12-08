@@ -18,7 +18,12 @@ function addusuarioHospital(usuarioHospital) {
 }
 function getusuarioHospital() {
     return __awaiter(this, void 0, void 0, function* () {
-        return usuarioHospital_schema_1.default.find();
+        return usuarioHospital_schema_1.default.find({
+            promocionUsuario: true
+        });
     });
 }
-exports.default = { addusuarioHospital, getusuarioHospital };
+function getusuarioHospitalById(id) {
+    return usuarioHospital_schema_1.default.findById(id);
+}
+exports.default = { addusuarioHospital, getusuarioHospital, getusuarioHospitalById };

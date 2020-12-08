@@ -16,9 +16,19 @@ const express_1 = __importDefault(require("express"));
 const usuarioHospital_controller_1 = __importDefault(require("./usuarioHospital.controller"));
 const response_module_1 = __importDefault(require("../../modulos/response.module"));
 const router = express_1.default.Router();
-router.get("/all", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.get("/postulacion", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const result = yield usuarioHospital_controller_1.default.getusuarioHospital();
+        response_module_1.default.success(req, res, result);
+    }
+    catch (error) {
+        response_module_1.default.error(req, res, "Error Desconocido");
+    }
+}));
+router.get("/id/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    let id = req.params.id;
+    try {
+        const result = yield usuarioHospital_controller_1.default.getusuarioHospitalById(id);
         response_module_1.default.success(req, res, result);
     }
     catch (error) {

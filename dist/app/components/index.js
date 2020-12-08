@@ -9,12 +9,14 @@ const postulacion_1 = __importDefault(require("./postulacion"));
 const situacion_1 = __importDefault(require("./situacion"));
 const curriculum_1 = __importDefault(require("./curriculum"));
 const usuarioFuncionario_1 = __importDefault(require("./usuarioFuncionario"));
+const user_1 = __importDefault(require("./user"));
 const components = [
     message_1.default,
     usuarioHospital_1.default,
     postulacion_1.default,
     situacion_1.default,
     curriculum_1.default,
-    usuarioFuncionario_1.default
+    usuarioFuncionario_1.default,
+    user_1.default
 ];
 exports.default = components;
