@@ -26,5 +26,23 @@ router.post("/register", async function (req: Request, res: Response) {
      responseModule.error(req, res, "Error desconocido")
   }
 });
+router.get("/usuarios", async (req: Request, res: Response) =>{
+  try {
+    const result: User[] | null = await userController.getusuario();
+    responseModule.success(req, res, result);
+  } catch (error) {
+    responseModule.error(req, res, "Error Desconocido");
+  }
+});
+
+router.get("/id/:id", async (req: Request, res: Response) =>{
+  let id = req.params.id;
+  try {
+    const result: User | null = await userController.getUserById(id);
+    responseModule.success(req, res, result);
+  } catch (error) {
+    responseModule.error(req, res, "Error Desconocido");
+  }
+});
 
 export default router;

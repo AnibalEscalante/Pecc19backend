@@ -5,10 +5,13 @@ function addusuarioHospital(usuarioHospital: usuarioHospital): Promise<usuarioHo
 
   return usuarioHospitalRepository.addusuarioHospital(usuarioHospital);
 }
-async function getusuarioHospital(): Promise<usuarioHospital[]>{
+function getusuarioHospital(): Promise<usuarioHospital[] | null>{
   return usuarioHospitalRepository.getusuarioHospital();
 }
 
+function getusuarioHospitalById(id: string){
+    return usuarioHospitalRepository.getusuarioHospitalById(id)
+}
 
 
-export default { addusuarioHospital, getusuarioHospital };
+export default { addusuarioHospital, getusuarioHospital, getusuarioHospitalById };
